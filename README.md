@@ -18,4 +18,11 @@ list.js
 
 		run: node list
 
+
+epi.js
+
+		an ec2 push/remote management tool. Simply pushes commands to groups of servers.
+
+		TODO: add this in
+
 -- {}
