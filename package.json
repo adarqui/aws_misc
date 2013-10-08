@@ -1,0 +1,25 @@
+{
+  "name": "aws_misc",
+  "preferGlobal": false,
+  "version": "0.0.1",
+  "author": "adarqui",
+  "description": "aws misc stuff",
+  "contributors": [
+    {
+      "name": "Andrew Darqui",
+      "email": "andrew.darqui@gmail.com"
+    }
+  ],
+  "keywords": [
+    "cli",
+	"aws",
+	"api"
+  ],
+  "dependencies" : {
+	"aws-sdk" : "~1.7.1"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.9"
+  }
+}
