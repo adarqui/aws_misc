@@ -180,6 +180,37 @@ module.exports = function() {
 
 
 
+	self.boot = function(type, ids, cbx) {
+		var fn;
+		switch(type) {
+			case 'start': {
+				fn = function(a,b) { return self.conf.ec2.startInstances(a,b); };
+				break;
+			}
+			case 'stop': {
+				fn = function(a,b) { return self.conf.ec2.stopInstances(a,b); };
+				break;
+			}
+			default: {
+				return;
+			}
+		}
+		fn({
+			InstanceIds: ids,
+		}, function(err,res) {
+			cbx(err,res);
+		});
+	}
+
+	self.boot_stop = function(ids, cbx) {
+		return self.boot("stop", ids, cbx);
+	}
+
+	self.boot_start = function(ids, cbx) {
+		return self.boot("start", ids, cbx);
+	}
+
+
 	self.i = {
 	list	: self.list_instances,
 	filters	: {

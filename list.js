@@ -22,7 +22,7 @@ var cbx = function(err,data) {
     for(var v in data.dns) {
         var re2 = re.exec(v)
         if(re2) {
-            console.log(v, data.dns[v].prvIP)
+            console.log(v, data.dns[v].prvIP, data.dns[v].instanceId)
         }
     }
 }
